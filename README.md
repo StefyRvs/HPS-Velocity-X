@@ -84,6 +84,11 @@ Analisi dello Stress Test
 
 ​Durante i test di resistenza, il sistema ha dimostrato una stabilità superiore ad Adam fino a livelli di rumore medio-alti. Sebbene Adam mantenga una leggera superiorità in condizioni di "nebbia estrema" (0.5), lo fa a un costo computazionale insostenibile per i dispositivi Edge, dove lo Sniper-Kernel rimane la scelta ottimale per rapporto prestazioni/consumi.
 
+Feature Adam (Standard) UltraSniper
+Training Time ~45s         0.31s
+Memory >200KB.            15.6KB
+Accuracy (Clean) 91.0%    93.0%
+
 ​Autore: Stefano
 Licenza: MIT
 
