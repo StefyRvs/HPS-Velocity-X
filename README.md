@@ -1,18 +1,26 @@
 Sniper-Kernel MNIST: The Adam Killer (Edge AI)
+
 ​Questo progetto presenta UltraSniper, un classificatore di cifre scritte a mano (MNIST) progettato per l'intelligenza artificiale Edge. Il sistema sfida l'algoritmo di ottimizzazione Adam, dimostrando che un'architettura matematica intelligente può battere il Deep Learning iterativo in termini di velocità, memoria e robustezza su hardware limitato.
+
 ​🚀 Prestazioni Record
-​Grazie all'architettura sviluppata da Stefano, abbiamo ottenuto i seguenti risultati:
+
+​Grazie all'architettura sviluppata da Stefano Rivis, abbiamo ottenuto i seguenti risultati:
 ​Accuratezza (Clean): 93.00% (superando il 91% di Adam a 20 nodi).
 ​Velocità di Training: ~0.3 secondi, risultando circa 200 volte più veloce di un modello basato su Adam.
 ​Footprint di Memoria: Solo 15.62 KB (grazie all'uso di pesi in float16), rendendolo perfetto per microcontrollori e dispositivi IoT.
 ​Robustezza: Mantiene un'accuratezza dell'83.55% anche con un disturbo (rumore) di livello 0.3.
+
 ​🛠️ Innovazioni Tecniche
+
 ​Il successo di questo modello si basa su tre pilastri fondamentali:
 ​Sniper Scope (Cannocchiale): Il sistema non analizza l'intera immagine da 784 pixel, ma si focalizza su un'area centrale di 20 \times 20 pixel, eliminando il rumore periferico e concentrando la potenza di calcolo sul "bersaglio".
 ​Contrasto Adattivo: Prima della classificazione, viene applicato un filtro che enfatizza lo scheletro del numero rispetto alla "nebbia digitale" (rumore gaussiano), permettendo di operare anche in condizioni visive critiche.
 ​Kernel Virtuale (Random Kitchen Sinks): Invece di addestrare pesi pesanti, il modello proietta i dati in uno spazio di 900 sensori virtuali (Seno/Coseno). Questo permette di avere la potenza di una rete neurale complessa con il costo computazionale di una semplice regressione lineare.
+
 ​💻 Codice Sorgente
+
 ​Ecco l'implementazione completa e pronta all'uso:
+
 import numpy as np
 
 class UltraSniper:
@@ -73,7 +81,9 @@ if __name__ == "__main__":
     from sklearn.model_selection import train_test_split
 
 Analisi dello Stress Test
+
 ​Durante i test di resistenza, il sistema ha dimostrato una stabilità superiore ad Adam fino a livelli di rumore medio-alti. Sebbene Adam mantenga una leggera superiorità in condizioni di "nebbia estrema" (0.5), lo fa a un costo computazionale insostenibile per i dispositivi Edge, dove lo Sniper-Kernel rimane la scelta ottimale per rapporto prestazioni/consumi.
+
 ​Autore: Stefano
 Licenza: MIT
 
