@@ -89,6 +89,6 @@ Training Time ~45s         0.31s
 Memory >200KB.            15.6KB
 Accuracy (Clean) 91.0%    93.0%
 
-​Autore: Stefano
+​Autore: Stefano Rivis
 Licenza: MIT
 
